@@ -47,7 +47,7 @@ const Widget = ({ type }) => {
         //isMoney para saber si agregamos el singo de pesos
         isMoney: true,
         counter: 12515155,
-        link: "Ver todos los usuarios",
+        link: "Ver el balance",
         icon: <AccountBalance className="icon" />,
       };
       break;
