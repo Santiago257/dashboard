@@ -2,14 +2,11 @@ import React from "react";
 import "./sidebar.scss";
 import {
   Assessment,
-  Logout,
   Dashboard,
   PersonOutlined,
   StoreMallDirectory,
   Inventory2Outlined,
-  NotificationsNone,
-  SettingsOutlined,
-  AccountCircleOutlined,
+  NotificationsNone
 } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
@@ -24,57 +21,44 @@ const Sidebar = () => {
       <hr />
       <div className="center">
         <ul>
-          <p className="title">MAIN</p>
+          <p className="title">PRINCIPAL</p>
           <Link to="/" style={{textDecoration: "none"}}>
           <li>
             <Dashboard className="icon" />
-            <span>Dashboard</span>
+            <span>Menú</span>
           </li>
           </Link>
-          <p className="title">LISTS</p>
+          <p className="title">REGISTROS</p>
           <Link to="/users" style={{textDecoration: "none"}}>
           <li>
             <PersonOutlined className="icon" />
-            <span>Users</span>
+            <span>Personal</span>
           </li>
           </Link>
           <Link to="/products" style={{textDecoration: "none"}}>
           <li>
             <StoreMallDirectory className="icon" />
-            <span>Products</span>
+            <span>Productos</span>
           </li>
           </Link>
           <li>
             <Inventory2Outlined className="icon" />
-            <span>Orders</span>
+            <span>Pedidos</span>
           </li>
-          <p className="title">USEFUL</p>
+          <p className="title">ADMINISTRACIÓN</p>
           <li>
             <Assessment className="icon" />
-            <span>Stats</span>
+            <span>Compras</span>
           </li>
           <li>
             <NotificationsNone className="icon" />
-            <span>Notification</span>
-          </li>
-          <p className="title">SETTINGS</p>
-          <li>
-            <SettingsOutlined className="icon" />
-            <span>Settings</span>
+            <span>Ventas</span>
           </li>
           <li>
-            <AccountCircleOutlined className="icon" />
-            <span>Profile</span>
-          </li>
-          <li>
-            <Logout className="icon" />
-            <span>Log out</span>
+            <NotificationsNone className="icon" />
+            <span>Inventario</span>
           </li>
         </ul>
-      </div>
-      <div className="bottom">
-          <div className="colorOption"></div>
-          <div className="colorOption"></div>
       </div>
     </div>
   );

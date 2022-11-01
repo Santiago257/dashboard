@@ -1,4 +1,4 @@
-.new {
+.newProduct {
   width: 100%;
   display: flex;
 
@@ -13,20 +13,18 @@
       display: flex;
 
       h1{
-        color: lightgray;
+        color: black;
       }
 
       .left{
         flex: 1;
         text-align: center;
-
-        img{
-            
-            object-fit: cover;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-        }
+        
+        .imagen{
+          margin-top: 35px;
+          width: 300px;
+          height: 200px;
+        } 
 
       }
 
@@ -42,6 +40,17 @@
 
             .formInput{
                 width: 40%;
+
+                .selecciones{
+                  width: 100%;
+                    padding: 5px;
+                    border: none;
+                    border-bottom: 1px solid grey;
+                    outline: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                }
 
                 label{
                     display: flex;
