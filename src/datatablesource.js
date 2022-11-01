@@ -55,7 +55,7 @@ export const userRows = [
         username: "Santiago",
         img:"https://cdn2.iconfinder.com/data/icons/avatars-vol-1-glyph/64/glyph-avatar-white-man-beard-256.png",
         status: "active",
-        email: "maria.hr@email.com",
+        email: "santiago.hr@email.com",
         age: 21,
     },
 ]
