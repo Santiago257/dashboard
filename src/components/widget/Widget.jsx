@@ -7,47 +7,43 @@ const Widget = ({ type }) => {
   let data;
 
   //Objetos temporales para mostrar en el front
-  const amount = 100;
+
   const diff = 20;
 
   switch (type) {
     case "user":
       data = {
-        title: "USUARIOS",
+        title: "PERSONAL",
         //isMoney para saber si agregamos el singo de pesos
         isMoney: false,
-        counter: 12515155,
-        link: "Ver todos los usuarios",
+        amount: 4,
         icon: <AccountCircleOutlined className="icon" />,
       };
       break;
       case "order":
       data = {
-        title: "ORDENES",
+        title: "PRODUCTOS",
         //isMoney para saber si agregamos el singo de pesos
         isMoney: false,
-        counter: 12515155,
-        link: "Ver todas las ordenes",
+        amount: 3,
         icon: <ShoppingCart className="icon" />,
       };
       break;
       case "earnings":
       data = {
-        title: "GANANCIAS",
+        title: "PEDIDOS",
         //isMoney para saber si agregamos el singo de pesos
-        isMoney: true,
-        counter: 12515155,
-        link: "Ver todas las ganancias",
+        isMoney: false,
+        amount: 45,
         icon: <MonetizationOn className="icon" />,
       };
       break;
       case "balance":
       data = {
-        title: "BALANCE",
+        title: "VENTAS",
         //isMoney para saber si agregamos el singo de pesos
         isMoney: true,
-        counter: 12515155,
-        link: "Ver el balance",
+        amount: 1248654,
         icon: <AccountBalance className="icon" />,
       };
       break;
@@ -59,8 +55,7 @@ const Widget = ({ type }) => {
     <div className="widget">
       <div className="left">
         <span className="title">{data.title}</span>
-        <span className="counter">{data.isMoney && "$"} {amount}</span>
-        <span className="link">{data.link}</span>
+        <span className="counter">{data.isMoney && "$"} {data.amount.toLocaleString()}</span>
       </div>
       <div className="right">
         <div className="percentage positive">

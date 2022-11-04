@@ -41,22 +41,21 @@ const Sidebar = () => {
             <span>Productos</span>
           </li>
           </Link>
+          <Link to="/pedidos" style={{textDecoration: "none"}}>
           <li>
             <Inventory2Outlined className="icon" />
             <span>Pedidos</span>
           </li>
+          </Link>  
           <p className="title">ADMINISTRACIÓN</p>
           <li>
+          
             <Assessment className="icon" />
             <span>Compras</span>
           </li>
           <li>
             <NotificationsNone className="icon" />
             <span>Ventas</span>
-          </li>
-          <li>
-            <NotificationsNone className="icon" />
-            <span>Inventario</span>
           </li>
         </ul>
       </div>

@@ -1,10 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
-import List from "./pages/list/List";
+import List from "./pages/listaUsuarios/List";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
 import NewProduct from "./pages/newProducts/NewProduct";
+import ListProductos from "./pages/listaProductos/List";
+import ListPedidos from './pages/listaPedidos/List'
+import NewPedido from './pages/newPedido/New'
+
 
 function App() {
   return (
@@ -27,9 +31,13 @@ function App() {
               <Route path="new" element={<New />} />
             </Route>
             <Route path="products">
-              <Route index element={<List/>} />
+              <Route index element={<ListProductos/>} />
               <Route path=":productId" element={<Single/>} />
               <Route path="new" element={<NewProduct/>}/>
+            </Route>
+            <Route path="pedidos">
+                <Route index element={<ListPedidos/>} />
+                <Route path="new" element={<NewPedido/>}/>
             </Route>
           </Route>
         </Routes>

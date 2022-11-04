@@ -11,7 +11,7 @@ const New = () => {
       <div className="newContainer">
         <Navbar />
         <div className="top">
-          <h1>Añadir nuevo usuario</h1>
+          <h1>Añadir nuevo pedido</h1>
         </div>
         <div className="bottom">
           <div className="left">
