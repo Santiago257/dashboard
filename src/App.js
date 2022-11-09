@@ -8,6 +8,7 @@ import NewProduct from "./pages/newProducts/NewProduct";
 import ListProductos from "./pages/listaProductos/List";
 import ListPedidos from './pages/listaPedidos/List'
 import NewPedido from './pages/newPedido/New'
+import Actividades from "./pages/actividades/Actividades";
 
 
 function App() {
@@ -38,6 +39,9 @@ function App() {
             <Route path="pedidos">
                 <Route index element={<ListPedidos/>} />
                 <Route path="new" element={<NewPedido/>}/>
+            </Route>
+            <Route path="actividades">
+                <Route index element={<Actividades/>} />
             </Route>
           </Route>
         </Routes>

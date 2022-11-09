@@ -6,7 +6,8 @@ import {
   PersonOutlined,
   StoreMallDirectory,
   Inventory2Outlined,
-  NotificationsNone
+  NotificationsNone,
+  CalendarMonth
 } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
@@ -49,7 +50,6 @@ const Sidebar = () => {
           </Link>  
           <p className="title">ADMINISTRACIÓN</p>
           <li>
-          
             <Assessment className="icon" />
             <span>Compras</span>
           </li>
@@ -57,6 +57,14 @@ const Sidebar = () => {
             <NotificationsNone className="icon" />
             <span>Ventas</span>
           </li>
+
+          <p className="title">GESTION</p>
+          <Link to="/actividades" style={{textDecoration: "none"}}>
+          <li>
+            <CalendarMonth className="icon" />
+            <span>Actividades</span>
+          </li>
+          </Link>
         </ul>
       </div>
     </div>

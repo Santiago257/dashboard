@@ -28,16 +28,12 @@ const Single = () => {
                 <span className="itemValue">santiagorm257@gmail.com</span>
               </div>
               <div className="detailsItem">
-                <span className="itemKey">Phone: </span>
+                <span className="itemKey">Telefono: </span>
                 <span className="itemValue">4271503373</span>
               </div>
               <div className="detailsItem">
-                <span className="itemKey">Address: </span>
-                <span className="itemValue">Patoni #100</span>
-              </div>
-              <div className="detailsItem">
-                <span className="itemKey">Country: </span>
-                <span className="itemValue">Mexico</span>
+                <span className="itemKey">Cargo: </span>
+                <span className="itemValue">Programador</span>
               </div>
             </div>
             </div>

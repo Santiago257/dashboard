@@ -16,41 +16,25 @@ const New = () => {
         <div className="bottom">
           <div className="left">
             <img
-              src="https://i.ibb.co/gtpZhbk/undraw-Meet-the-team-re-4h08.png"
+              src="https://i.ibb.co/8btxKj3/undraw-Order-delivered-re-v4ab.png"
               alt="Sin imagen"
             />
           </div>
           <div className="right">
             <form className="form">
               <div className="formInput">
-                <label>Nombre</label>
-                <input type="text" placeholder="Santiago" />
+                <label>Empresa</label>
+                <input type="text" placeholder="Nombre de la empresa" />
               </div>
               <div className="formInput">
-                <label>Apellido Paterno</label>
-                <input type="text" placeholder="Ramirez" />
+                <label>Piezas</label>
+                <input type="tel" placeholder="Piezas" />
               </div>
               <div className="formInput">
-                <label>Apellido Materno</label>
-                <input type="text" placeholder="Munguia" />
-              </div>
-              <div className="formInput">
-                <label>Email</label>
-                <input type="text" placeholder="santiago.ramirez@gmail.com" />
-              </div>
-              <div className="formInput">
-                <label>Telefono</label>
-                <input type="tel" placeholder="4271503373"/>
-              </div>
-              <div className="formInput">
-                <label>Cargo</label>
-                <select className="selecciones" id="cargos" name="cargos">
-                  <option value="monitor">Jefe</option>
-                  <option value="laptop">Editor</option>
-                  <option value="componente">Diseñador</option>
-                  <option value="celular">Programador</option>
-                  <option value="tableta">Escritor</option>
-                  <option value="televisor">Operador</option>
+                <label>Producto</label>
+                <select className="selecciones" id="producto" name="producto">
+                  <option value="monitor">Monitor HP EliteDisplay 27</option>
+                  <option value="laptop">Laptop Envy 360 HP</option>
                 </select>
               </div>
               <button>Enviar</button>
