@@ -9,6 +9,7 @@ import ListProductos from "./pages/listaProductos/List";
 import ListPedidos from './pages/listaPedidos/List'
 import NewPedido from './pages/newPedido/New'
 import Actividades from "./pages/actividades/Actividades";
+import NewActividad from "./pages/newActividad/New";
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
             </Route>
             <Route path="actividades">
                 <Route index element={<Actividades/>} />
+                <Route path="new" element={<NewActividad/>}/>
             </Route>
           </Route>
         </Routes>

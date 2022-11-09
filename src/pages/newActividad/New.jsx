@@ -1,32 +1,32 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "./new.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 
-const New = () => {
+const NewActividad = () => {
   //Funcion para generar un numero entero random
   function getRandomId() {
     return Math.floor(Math.random() * 10000000);
   }
   //Creacion de las constantes que nos van a servir para declarar estados
-  const [infoPedido, setinfoPedido] = useState({
-    empresa: "",
-    piezas: "",
-    producto: "",
+  const [infoActividad, setinfoActividad] = useState({
+    nombre: "",
+    descripcion: "",
+    fecha: "",
   });
   //Evento que nos ayudará a asignarle valor a nuestra variable mientras se vaya cambiando
   const handleInputChange = (event) => {
-    setinfoPedido({
-      ...infoPedido,
+    setinfoActividad({
+      ...infoActividad,
       [event.target.name]: event.target.value,
     });
   };
   //Evento para agregar a la base de datos el valor de nuestros inputs
   const enviarDatos = (event) => {
     event.preventDefault();
-    console.log(infoPedido.empresa + infoPedido.piezas + infoPedido.producto)    /*
+    /*
       Consulta para ingresar a la base de datos
-      INSERT INTO productos VALUES ({getRandomId()},{infoPedido.empresa},{infoPedido.piezas}, {infoPedido.producto})
+      INSERT INTO actividades VALUES ({getRandomId()},{infoActividad.nombre},{infoActividad.descripcion}, {infoActividad.fecha}, 'Pendiente')
     */
   };
 
@@ -36,34 +36,40 @@ const New = () => {
       <div className="newContainer">
         <Navbar />
         <div className="top">
-          <h1>Añadir nuevo pedido</h1>
+          <h1>Añadir nueva actividad</h1>
         </div>
         <div className="bottom">
           <div className="left">
             <img
-              src="https://i.ibb.co/8btxKj3/undraw-Order-delivered-re-v4ab.png"
+              src="https://i.ibb.co/HdK7Zyn/undraw-Events-re-98ue.png"
               alt="Sin imagen"
             />
           </div>
           <div className="right">
             <form className="form" onSubmit={enviarDatos}>
               <div className="formInput">
-                <label>Empresa</label>
-                <input type="text" placeholder="Nombre de la empresa" onChange={handleInputChange} name="empresa" />
+                <label>Nombre</label>
+                <input
+                  type="text"
+                  placeholder="Nombre de la actividad"
+                  onChange={handleInputChange}
+                  name="nombre"
+                />
               </div>
               <div className="formInput">
-                <label>Piezas</label>
-                <input type="tel" placeholder="Piezas" onChange={handleInputChange} name="piezas" />
+                <label>Descripcion</label>
+                <input
+                  type="text"
+                  placeholder="Descripcion de la actividad"
+                  onChange={handleInputChange}
+                  name="descripcion"
+                />
               </div>
               <div className="formInput">
-                <label>Producto</label>
-                <select className="selecciones" id="producto" name="producto" onChange={handleInputChange} >
-                  <option value="" disabled selected>Seleccione una opcion</option>
-                  <option value="monitor">Monitor HP EliteDisplay 27</option>
-                  <option value="laptop">Laptop Envy 360 HP</option>
-                </select>
+                <label>Fecha</label>
+                <input type="date" onChange={handleInputChange} name="fecha" />
               </div>
-              <button>Enviar</button>
+              <button type="submit">Enviar</button>
             </form>
           </div>
         </div>
@@ -72,4 +78,4 @@ const New = () => {
   );
 };
 
-export default New;
+export default NewActividad;

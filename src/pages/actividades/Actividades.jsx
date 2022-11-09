@@ -1,14 +1,11 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Sidebar from '../../components/sidebar/Sidebar'
 import Navbar from '../../components/navbar/Navbar'
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
+import DatatableActividades from '../../components/datatableActividades/Datatable';
 
 
 function Actividades() {
 
-const [value, onChange] = useState(new Date());
-console.log(value)
   return (
     
 
@@ -17,11 +14,7 @@ console.log(value)
       <Sidebar />
       <div className="newContainer">
         <Navbar />
-            {/* <Calendar minDate={new Date()}  onChange={onChange} value={value}/> */}    
-
-            
-            
-
+            <DatatableActividades/>
       </div>
     </div>    
   )

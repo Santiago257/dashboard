@@ -25,6 +25,7 @@ client
     client.end()    
   });
 
+
 //Consulta para mostrar todas las actividades
 /*client
   .query("SELECT * FROM actividades")
