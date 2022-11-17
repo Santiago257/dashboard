@@ -49,15 +49,18 @@ const Sidebar = () => {
           </li>
           </Link>  
           <p className="title">ADMINISTRACIÓN</p>
+          <Link to="/compras" style={{textDecoration: "none"}}>
           <li>
             <Assessment className="icon" />
             <span>Compras</span>
           </li>
+          </Link>
+          <Link to="/ventas" style={{textDecoration: "none"}}>
           <li>
             <NotificationsNone className="icon" />
             <span>Ventas</span>
           </li>
-
+          </Link>
           <p className="title">GESTION</p>
           <Link to="/actividades" style={{textDecoration: "none"}}>
           <li>

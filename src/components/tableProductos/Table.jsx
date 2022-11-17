@@ -11,16 +11,22 @@ import "./table.scss";
 const List = () => {
   const rows = [
     {
-      id: 114528,
-      empresa: "VASS",
-      piezas: 6,
-      producto: "Monitor HP EliteDisplay 27",
+      id: 1,
+      nombre: "Monitor HP EliteDisplay 27",
+      categoria: "Monitor",
+      existencias: 18
     },
     {
-      id: 114528,
-      empresa: "VASS",
-      piezas: 3,
-      producto: "Laptop Envy 360 HP",
+      id: 2,
+      nombre: "Laptop Envy 360 HP",
+      categoria: "Laptop",
+      existencias: 11
+    },
+    {
+      id: 3,
+      nombre: "Procesador 12400f",
+      categoria: "Componente",
+      existencias: 6
     },
   ];
 
@@ -29,19 +35,19 @@ const List = () => {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell className="tableCell">Id del pedido</TableCell>
-            <TableCell className="tableCell">Empresa</TableCell>
-            <TableCell className="tableCell">Piezas</TableCell>
-            <TableCell className="tableCell">Producto</TableCell>
+            <TableCell className="tableCell">ID del producto</TableCell>
+            <TableCell className="tableCell">Nombre</TableCell>
+            <TableCell className="tableCell">Categoria</TableCell>
+            <TableCell className="tableCell">Existencias</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.id}>
               <TableCell> {row.id}</TableCell>
-              <TableCell className="tableCell">{row.empresa}</TableCell>
-              <TableCell className="tableCell">{row.piezas}</TableCell>
-              <TableCell className="tableCell">{row.producto}</TableCell>
+              <TableCell className="tableCell">{row.nombre}</TableCell>
+              <TableCell className="tableCell">{row.categoria}</TableCell>
+              <TableCell className="tableCell">{row.existencias}</TableCell>
             </TableRow>
           ))}
         </TableBody>

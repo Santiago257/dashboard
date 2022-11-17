@@ -11,16 +11,19 @@ import "./table.scss";
 const List = () => {
   const rows = [
     {
-      id: 114528,
-      empresa: "VASS",
-      piezas: 6,
-      producto: "Monitor HP EliteDisplay 27",
+      id: 1,
+      idPedido: 14156456,
+      precio: 45656656
     },
     {
-      id: 114528,
-      empresa: "VASS",
-      piezas: 3,
-      producto: "Laptop Envy 360 HP",
+      id: 2,
+      idPedido: 245456454,
+      precio: 787454464
+    },
+    {
+      id: 3,
+      idPedido: 2345678656,
+      precio: 1231129848
     },
   ];
 
@@ -29,19 +32,17 @@ const List = () => {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
+            <TableCell className="tableCell">ID de la venta</TableCell>
             <TableCell className="tableCell">Id del pedido</TableCell>
-            <TableCell className="tableCell">Empresa</TableCell>
-            <TableCell className="tableCell">Piezas</TableCell>
-            <TableCell className="tableCell">Producto</TableCell>
+            <TableCell className="tableCell">Precio</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.id}>
               <TableCell> {row.id}</TableCell>
-              <TableCell className="tableCell">{row.empresa}</TableCell>
-              <TableCell className="tableCell">{row.piezas}</TableCell>
-              <TableCell className="tableCell">{row.producto}</TableCell>
+              <TableCell className="tableCell">{row.idPedido}</TableCell>
+              <TableCell className="tableCell">{"$ " + row.precio.toLocaleString()}</TableCell>
             </TableRow>
           ))}
         </TableBody>

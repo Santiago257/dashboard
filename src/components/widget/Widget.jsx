@@ -16,6 +16,7 @@ const Widget = ({ type }) => {
         title: "PERSONAL",
         //isMoney para saber si agregamos el singo de pesos
         isMoney: false,
+        //SELECT COUNT(*) FROM personal
         amount: 4,
         icon: <AccountCircleOutlined className="icon" />,
       };
@@ -25,6 +26,7 @@ const Widget = ({ type }) => {
         title: "PRODUCTOS",
         //isMoney para saber si agregamos el singo de pesos
         isMoney: false,
+        //SELECT COUNT(*) FROM productos
         amount: 3,
         icon: <ShoppingCart className="icon" />,
       };
@@ -34,6 +36,7 @@ const Widget = ({ type }) => {
         title: "PEDIDOS",
         //isMoney para saber si agregamos el singo de pesos
         isMoney: false,
+        //SELECT COUNT(*) FROM pedidos
         amount: 45,
         icon: <MonetizationOn className="icon" />,
       };

@@ -10,6 +10,10 @@ import ListPedidos from './pages/listaPedidos/List'
 import NewPedido from './pages/newPedido/New'
 import Actividades from "./pages/actividades/Actividades";
 import NewActividad from "./pages/newActividad/New";
+import ListCompras from "./pages/listaCompras/List";
+import NewCompra from "./pages/newCompra/New";
+import ListVentas from "./pages/listaVentas/List";
+import NewVenta from "./pages/newVenta/New";
 
 
 function App() {
@@ -44,6 +48,14 @@ function App() {
             <Route path="actividades">
                 <Route index element={<Actividades/>} />
                 <Route path="new" element={<NewActividad/>}/>
+            </Route>
+            <Route path="compras">
+                <Route index element={<ListCompras/>}  />
+                <Route path="new" element={<NewCompra/>}/>
+            </Route>
+            <Route path="ventas">
+                <Route index element={<ListVentas/>} />
+                <Route path="new" element={<NewVenta/>}/>
             </Route>
           </Route>
         </Routes>

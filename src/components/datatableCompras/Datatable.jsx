@@ -1,16 +1,16 @@
 import React from 'react'
 import "./datatable.scss"
 import { Link } from 'react-router-dom';
-import List from '../tableUsuarios/Table'
+import List from '../tableCompras/Table'
 
-const DatatableVentas = () => {
+const DatatableCompras = () => {
 
   return (
     <div className="datatable">
         <div className="datatableTitle">
-            Usuarios
-            <Link to="/users/new" className="link">
-                Añadir nuevo usuario
+            Compras
+            <Link to="/compras/new" className="link">
+                Añadir nueva compra
             </Link>
         </div>
         <List/>
@@ -18,4 +18,4 @@ const DatatableVentas = () => {
   )
 }
 
-export default DatatableVentas
+export default DatatableCompras

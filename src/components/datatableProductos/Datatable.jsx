@@ -1,7 +1,7 @@
 import React from 'react'
 import "./datatable.scss"
 import { Link } from 'react-router-dom';
-import List from '../table/Table'
+import List from '../tableProductos/Table'
 
 const DatatableProductos = () => {
 

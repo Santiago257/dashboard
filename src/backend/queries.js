@@ -37,7 +37,7 @@ client
   .catch((err) =>{
     console.log(err.message)
     client.end()
-  })
+  })+
 
 //Consulta para mostrar todas las compras  
 /*client
